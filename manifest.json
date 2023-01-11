@@ -1,0 +1,11 @@
+{
+    "name": "Kwun Tong Information",
+    "version": "1.0.0",
+    "description": "Stats about Kwun Tong",
+    "manifest_version": 3,
+    "author": "Ric",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "問候觀塘"
+    }
+}
