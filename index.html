@@ -11,10 +11,18 @@
             text-align: left;
             color: white;
             font-weight: 600;
-            /* background-color: rgb(83, 195, 83); */
-            background-color: rgb(184, 83, 195);
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            background-color: #53c353;
             height:90px;
             padding: 15px;
+            align-items: baseline;
+        }
+        #place{
+            height: 20px;
+            font-size: small;
         }
         #airtitle{
             width:100px
@@ -23,7 +31,7 @@
             background-color: white;
             position: relative;
             width:95%;
-            top: -45px;
+            top: -38px;
             margin: auto;
         }
         .table:hover{
@@ -31,21 +39,45 @@
         }
         .container{
             width: 420px;
-            height: 200px;
+            height: 185px;
             background-color: rgb(222, 222, 222);
             padding: 0;
+        }
+        #lastUpdate{
+            font-size: small;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: smaller;
+            text-align: right;
+            width: 100%;
+            margin-right: 10px;
+        }
+        .footer>a{
+            color:#777;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>觀塘的事</h2>
+        <div class="header">
+            <h2 id="title">觀塘的事</h2>
+            <select id="place">
+                <option>觀塘</option>
+                <option>油尖旺</option>
+                <option>將軍澳</option>
+                <option>赤鱲角</option>
+                <option>香港仔</option>
+            </select>
+        </div>
         <table class="table">
             <thead>
                 <tr style="vertical-align: initial">
                     <th id="airtitle">空氣質素<br>健康指數</th>
-                    <th>健康風險級別</th>
-                    <th>現時氣溫</th>
+                    <th>健康風險<br>級別</th>
+                    <th>現時<br>氣溫</th>
                     <th>最後更新時間</th>
                 </tr>
             </thead>
@@ -58,6 +90,11 @@
                 </tr>
             </tbody>
         </table>
+        <div class="footer">
+            <span>參考網址:</span>
+            <a href="https://www.hko.gov.hk/tc/index.html">香港天文台</a>
+            <a href="https://www.aqhi.gov.hk/tc.html">環境保護署</a>
+        </div>
     </div>
 
     <script src="script.js"></script>
